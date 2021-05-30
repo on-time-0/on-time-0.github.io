@@ -1,6 +1,9 @@
 #container {
-  min-height: 100vh; // height of the browser viewport
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#demo {
+  font-size: 300%;
 }
