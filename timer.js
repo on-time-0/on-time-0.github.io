@@ -11,13 +11,13 @@ let x = setInterval(() => {
   let distance = countDownDate - now;
 
   // Time calculations for days, hours, minutes and seconds
-  let days = Math.floor(distance / (1000 * 60 * 60 * 24)).startPad(2, 0),
-  hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).startPad(2, 0),
-  minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).startPad(2, 0),
-  seconds = Math.floor((distance % (1000 * 60)) / 1000).startPad(2, 0);
+  let days = Math.floor(distance / (1000 * 60 * 60 * 24)),
+  hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+  minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+  seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + ":" + hours + ":" + minutes + ":" + seconds;
+  document.getElementById("demo").innerHTML = days.startPad(2, 0) + ":" + hours.startPad(2, 0) + ":" + minutes.startPad(2, 0) + ":" + seconds.startPad(2, 0);
 
   // If the count down is finished, write some text
   if (distance < 0) {
