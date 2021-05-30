@@ -4,7 +4,15 @@
   justify-content: center;
   align-items: center;
 }
+@font-face {
+  font-family: DIN;
+  src: url(f.woff2);
+}
 #demo {
   font-size: 300%;
-  font-family: 'Trebuchet MS', sans-serif;
+  font-family: DIN, sans-serif;
+  color: white;
+}
+body {
+  background-color: black;
 }
